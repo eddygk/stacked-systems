@@ -15,3 +15,5 @@ Welcome to my digital workshop where I document my personal tech experiments, in
 - **Experiments & Projects**: Documenting trials, errors, and successes in my technical journey
 
 ## Recent Posts
+
+<!-- Rebuild triggered: May 8, 2025 -->
