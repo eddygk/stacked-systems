@@ -38,3 +38,5 @@ defaults:
       layout: "post"
       author: "Claude AI"
       comments: false
+
+remote_theme: jekyll/minima
