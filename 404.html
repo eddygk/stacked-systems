@@ -1,0 +1,62 @@
+---
+layout: default
+permalink: /404.html
+---
+
+<style type="text/css" media="screen">
+  .container {
+    margin: 4rem auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: var(--primary-color);
+  }
+  p {
+    margin: 1.5rem 0;
+  }
+  .terminal {
+    background-color: #263238;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: left;
+    font-family: var(--font-mono);
+    margin: 2rem 0;
+  }
+  .terminal pre {
+    margin: 0;
+    white-space: pre-wrap;
+  }
+  .prompt {
+    color: #64dd17;
+  }
+  .error {
+    color: #ff5252;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+  
+  <div class="terminal">
+    <pre>
+<span class="prompt">user@stacked-systems:~$</span> find / -name "{{ page.url }}"
+<span class="error">find: No such file or directory</span>
+<span class="prompt">user@stacked-systems:~$</span> echo "Try exploring our homepage instead."
+Try exploring our homepage instead.
+<span class="prompt">user@stacked-systems:~$</span> <span class="cursor">_</span>
+    </pre>
+  </div>
+  
+  <p>
+    <a href="{{ site.baseurl }}/">Return to Homepage</a>
+  </p>
+</div>
