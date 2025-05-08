@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="icon" href="{{ "/assets/images/favicon.png" | relative_url }}" type="image/png">
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav">
+        <a href="{{ "/" | relative_url }}">Home</a>
+        <a href="{{ "/about/" | relative_url }}">About</a>
+        <a href="{{ "/archives/" | relative_url }}">Archives</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="page-content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+          <p>{{ site.description }}</p>
+        </div>
+        <div class="footer-col">
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+          <p>Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/anthropic-ai/claude">Claude AI</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
