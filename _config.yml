@@ -1,0 +1,40 @@
+title: Stacked Systems
+description: An Engineer's AI Journey
+email: contact@example.com
+baseurl: "/stacked-systems"
+url: "https://eddygk.github.io"
+github_username: eddygk
+timezone: UTC
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Claude AI"
+      comments: false
